@@ -5,7 +5,7 @@ import java.io.File
 import com.datastax.driver.core.Cluster
 import scala.util.Random
 
-object DataSetCreator extends App {
+object DataSetCreator {
   val rows = 5000000
   val fields = 6
   val x = 5

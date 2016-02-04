@@ -4,7 +4,7 @@ import com.datastax.driver.core.{ColumnMetadata, Cluster}
 import scala.collection.JavaConversions._
 import scala.collection.JavaConverters._
 
-object GetMeta extends App {
+object GetMeta {
   val cluster = Cluster.builder().addContactPoint("127.0.0.1").build()
   val session = cluster.connect("glassbeam")
 

@@ -2,7 +2,7 @@ package bloat
 
 import com.datastax.driver.core.Cluster
 
-object FileToCass extends App {
+object FileToCass {
 
   val cluster = Cluster.builder().addContactPoint("127.0.0.1").build()
   val session = cluster.connect("export")

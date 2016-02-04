@@ -4,7 +4,7 @@ import com.datastax.driver.core.{ResultSet, Cluster}
 import scala.collection.JavaConverters._
 import scala.collection.immutable.HashMap
 
-object DriverTest extends App {
+object DriverTest {
   val cluster = Cluster.builder().addContactPoint("127.0.0.1").build()
   val session = cluster.connect("glassbeam")
 

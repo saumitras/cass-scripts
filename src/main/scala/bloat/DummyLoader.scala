@@ -4,7 +4,7 @@ import com.datastax.driver.core.Cluster
 
 import scala.util.Random
 
-object DummyLoader extends App {
+object DummyLoader {
   val cluster = Cluster.builder().addContactPoint("127.0.0.1").build()
   val session = cluster.connect("bloat")
 

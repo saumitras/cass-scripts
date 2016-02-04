@@ -7,7 +7,7 @@ import scala.collection.JavaConverters._
 
 import java.util.Date
 case class Four(one:String, two:String)
-object PreparedTest extends App {
+object PreparedTest {
 
   val cluster = Cluster.builder().addContactPoint("127.0.0.1").build()
   val session = cluster.connect("glassbeam")

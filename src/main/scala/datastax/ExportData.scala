@@ -2,7 +2,7 @@ package datastax
 
 import com.datastax.driver.core.Cluster
 
-object ExportData extends App {
+object ExportData {
 
   val cluster = Cluster.builder().addContactPoint("127.0.0.1").build()
   val session = cluster.connect("export")
