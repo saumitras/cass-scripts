@@ -10,9 +10,13 @@ object DriverTest {
 
   val results:ResultSet = session.execute("SELECT mfr,prod FROM event_tbl limit 2")
 
-  val cols = results.getColumnDefinitions.asScala.map(c => (c.getName -> c.getType)).toMap
+  val cols = results.getColumnDefinitions.asScala.map(c => c.getName -> c.getType).toMap
 
   var resultList:List[Map[String,String]] = List()
+
+  val newData = results.asScala.toList
+
+
 
   for(row <- results.asScala.toList) {
     var m = HashMap[String,String]()

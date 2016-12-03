@@ -14,7 +14,7 @@ case class DColumn(name:String, datatype:String, value:String)
 case class DRow(row:List[DColumn])
 
 
-object CassToFile extends App {
+object CassToFile {
 
   val QUERY = "SELECT * FROM del1"
   val FETCH_SIZE = 5
@@ -75,8 +75,8 @@ object ExportData {
 
         println(line)
 
-        if(storeSerialized) serializedWriter.write(l)
-        if(storePlainText) textWriter.write(l)
+        if(storeSerialized) serializedWriter.write(line + "\n")
+        if(storePlainText) textWriter.write(line)
 
       }
     }

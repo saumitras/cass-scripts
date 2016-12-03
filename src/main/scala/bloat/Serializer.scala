@@ -4,7 +4,7 @@ import java.io._
 import scala.pickling.binary._
 import scala.pickling.Defaults._
 
-object PickleTest extends App {
+object PickleTest {
   case class Col(name:String, datatype:String, value:String)
   case class Row(row:List[Col])
 
